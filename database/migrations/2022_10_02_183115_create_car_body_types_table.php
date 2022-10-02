@@ -14,7 +14,7 @@ return new class extends Migration {
     {
         Schema::create('car_body_types', function (Blueprint $table) {
             $table->id();
-            $table->string('slug')->unique();
+            $table->string('slug');
             $table->string('name');
         });
     }

@@ -11,8 +11,4 @@ class CarModel extends Model
 
     protected $fillable = ['name'];
 
-    public function car()
-    {
-        return $this->belongsTo(Car::class);
-    }
 }

@@ -12,8 +12,12 @@ class Car extends Model
 
     protected $fillable = ["modelId", "modelName", "bodyType", "modelType", "imageUrl", "year_released"];
 
-    public function car()
+    public function modelName()
     {
-        return $this->hasMany(CarBodyType::class);
+        return $this->hasMany(CarModel::class);
+    }
+    public function bodyType()
+    {
+        return $this->belongsTo(CarBodyType::class);
     }
 }
