@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Car;
+use App\Http\Resources\CarResource;
 use Illuminate\Http\Request;
 
 class CarController extends Controller
@@ -15,12 +16,8 @@ class CarController extends Controller
      */
     public function index()
     {
-        $cars = Car::all();
 
-        return response()->json([
-            'status' => true,
-            'data' => $cars
-        ]);
+        return CarResource::collection(Car::all());
     }
 
     /**
@@ -52,7 +49,7 @@ class CarController extends Controller
      */
     public function show(Car $car)
     {
-    //
+        return new CarResource($car);
     }
 
     /**

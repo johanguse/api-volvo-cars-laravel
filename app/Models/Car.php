@@ -14,10 +14,10 @@ class Car extends Model
 
     public function modelName()
     {
-        return $this->hasMany(CarModel::class);
+        return $this->hasOne(BodyType::class);
     }
     public function bodyType()
     {
-        return $this->belongsTo(CarBodyType::class);
+        return $this->hasMany(ModelType::class);
     }
 }
