@@ -79,7 +79,7 @@ return [
             /*
              * Edit to set path where swagger ui assets should be stored
              */
-            'swagger_ui_assets_path' => env('L5_SWAGGER_UI_ASSETS_PATH', 'vendor/swagger-api/swagger-ui/dist/'),
+            'swagger_ui_assets_path' => env('L5_SWAGGER_UI_ASSETS_PATH', 'public/docs/'),
             /*
              * Absolute path to directories that should be exclude from scanning
              * @deprecated Please use `scanOptions.exclude`
